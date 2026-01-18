@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cozy Cafe Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="app-container">
+
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <div>
+            <h1>Cozy Cafe</h1>
+            <h2>Dashboard</h2>
+        </div>
+        <a href="/logout" class="btn btn-light">Logout</a>
+    </div>
+
+    <div class="dashboard-grid">
+
+        <div class="card">
+            <h3>Take Order</h3>
+            <p style="color: #8b6144; margin-bottom: 15px;">Create new customer orders</p>
+            <a href="/order" class="btn">Go to Orders</a>
+        </div>
+
+        <div class="card">
+            <h3>View Menu</h3>
+            <p style="color: #8b6144; margin-bottom: 15px;">Browse available items</p>
+            <a href="/menu" class="btn btn-light">View Menu</a>
+        </div>
+
+        <div class="card">
+            <h3>View Orders</h3>
+            <p style="color: #8b6144; margin-bottom: 15px;">Check all placed orders</p>
+            <a href="/orders" class="btn">View Orders</a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

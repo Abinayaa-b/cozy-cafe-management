@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bill</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="app-container">
+
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h1>Bill Details</h1>
+        <a href="/orders" class="btn btn-light">← Back to Orders</a>
+    </div>
+
+    <div class="card" style="max-width: 500px; margin: 0 auto; text-align: center;">
+        <h2 style="margin-bottom: 25px;">🧾 Bill Receipt</h2>
+        
+        <div style="background: #f4e3cf; padding: 20px; border-radius: 12px; margin-bottom: 20px;">
+            <p style="margin-bottom: 12px; font-size: 18px;"><strong>Order #{{ order.id }}</strong></p>
+            <p style="margin-bottom: 10px;">Table: <strong>{{ order.table_no }}</strong></p>
+            <p style="margin-bottom: 10px;">Item: {{ order.item_name }}</p>
+            <p style="margin-bottom: 10px;">Quantity: {{ order.quantity }}</p>
+            <hr style="border: none; border-top: 2px dashed #c97b4d; margin: 15px 0;">
+            <p style="font-size: 20px; font-weight: bold; color: #5a341f;">Total: ₹{{ order.total }}</p>
+        </div>
+
+        <p style="color: #8b6144; font-size: 14px; margin-bottom: 20px;">{{ order.created_at }}</p>
+
+        <div style="display: flex; gap: 10px; justify-content: center;">
+            <a href="/orders" class="btn">View All Orders</a>
+            <a href="/dashboard" class="btn btn-light">Dashboard</a>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

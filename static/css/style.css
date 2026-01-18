@@ -1,0 +1,295 @@
+/* ===============================
+   COZY CAFE – GLOBAL THEME
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f6e6d4, #f2d9c2);
+    min-height: 100vh;
+    color: #4a2c1a;
+}
+
+/* ===============================
+   APP CONTAINER (CENTERED)
+================================ */
+
+.app-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* ===============================
+   COMMON CARD STYLE
+================================ */
+
+.card {
+    background: #fffaf3;
+    border-radius: 20px;
+    padding: 22px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* ===============================
+   HEADINGS
+================================ */
+
+h1, h2, h3 {
+    color: #5a341f;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+/* ===============================
+   BUTTONS
+================================ */
+
+.btn {
+    background: linear-gradient(135deg, #c97b4d, #a45b32);
+    color: #fff;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.btn-light {
+    background: #efe1d2;
+    color: #5a341f;
+}
+
+.btn-small {
+    padding: 8px 16px;
+    font-size: 13px;
+}
+
+/* ===============================
+   INPUTS & SELECT
+================================ */
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    border: 1px solid #e2cdb7;
+    outline: none;
+    font-size: 14px;
+}
+
+input:focus, select:focus {
+    border-color: #c97b4d;
+}
+
+/* ===============================
+   LOGIN PAGE
+================================ */
+
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.login-card {
+    width: 380px;
+    text-align: center;
+}
+
+.login-card h1 {
+    margin-bottom: 25px;
+}
+
+/* ===============================
+   DASHBOARD GRID
+================================ */
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 22px;
+}
+
+/* ===============================
+   MENU ITEMS
+================================ */
+
+.menu-section {
+    margin-bottom: 30px;
+}
+
+.menu-section h3 {
+    color: #8b6144;
+    margin-bottom: 15px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #fdf3e7;
+    border-radius: 14px;
+    margin-bottom: 12px;
+}
+
+.item-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.item-name {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.item-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.item-price {
+    font-weight: 600;
+    font-size: 16px;
+    color: #5a341f;
+}
+
+.status-available {
+    color: #28a745;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.status-unavailable {
+    color: #dc3545;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* ===============================
+   ORDER LIST
+================================ */
+
+.order-item {
+    padding: 12px;
+    border-bottom: 1px dashed #e4cdb5;
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-item:last-child {
+    border-bottom: none;
+}
+
+/* ===============================
+   TOTAL / BILL
+================================ */
+
+.total-box {
+    background: #f4e3cf;
+    padding: 15px;
+    border-radius: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* ===============================
+   NAV / LINKS
+================================ */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #5a341f;
+    font-weight: 500;
+}
+
+/* ===============================
+   SUCCESS MESSAGE
+================================ */
+
+.success {
+    background: #d7f3dc;
+    color: #256029;
+    padding: 12px;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* ===============================
+   ORDER CARD LAYOUT FIX
+================================ */
+
+.order-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.order-info p {
+    margin-bottom: 6px;
+}
+
+.order-actions {
+    text-align: right;
+}
+
+/* ===============================
+   BILL PAGE FIX
+================================ */
+
+.bill-card {
+    max-width: 450px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.bill-card p {
+    margin: 10px 0;
+    font-size: 15px;
+}
+
+.bill-actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}

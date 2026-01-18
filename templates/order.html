@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Take Order</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="app-container">
+
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h1>Take Order</h1>
+        <a href="/dashboard" class="btn btn-light">← Back to Dashboard</a>
+    </div>
+
+    <div class="card" style="max-width: 500px; margin: 0 auto;">
+        <h2>New Order</h2>
+
+        <form method="POST">
+            <label style="display: block; margin-top: 15px; font-weight: 500;">Table Number</label>
+            <input name="table_no" placeholder="Enter table number" required>
+
+            <label style="display: block; margin-top: 15px; font-weight: 500;">Select Item</label>
+            <select name="item" required>
+                <option value="">-- Choose an item --</option>
+                {% for i in items %}
+                <option value="{{ i.item_name }}">
+                    {{ i.item_name }} - ₹{{ i.price }}
+                </option>
+                {% endfor %}
+            </select>
+
+            <label style="display: block; margin-top: 15px; font-weight: 500;">Quantity</label>
+            <input type="number" name="quantity" value="1" min="1" required>
+            
+            <button class="btn" style="width: 100%; margin-top: 20px;">Place Order</button>
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>

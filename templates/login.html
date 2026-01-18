@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cozy Cafe Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="login-wrapper">
+
+    <div class="card login-card">
+
+        <img src="{{ url_for('static', filename='images/logo.png') }}" width="80">
+
+        <h1>Welcome to Cozy Cafe</h1>
+
+        <form method="POST" action="/login">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button class="btn">Enter the Cafe</button>
+        </form>
+
+        {% if error %}
+            <p style="color:red">{{ error }}</p>
+        {% endif %}
+
+    </div>
+
+</div>
+
+</body>
+</html>
